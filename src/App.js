@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import moment from 'moment'
 
-function App() {
+export default () => {
+  const one_year = moment("20200513")
+  const now = moment()
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <code>Today is {now.format('dddd, MMMM Do YYYY')}</code>
+        <h1>{one_year.diff(now, 'days')}</h1>
+        <code>days until May 13, 2020</code>
       </header>
     </div>
   );
 }
 
-export default App;

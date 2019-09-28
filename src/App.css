@@ -17,6 +17,8 @@
   color: white;
 }
 
-.App-link {
+h1 {
+  margin: 0;
+  font-size: 270px;
   color: #09d3ac;
 }
